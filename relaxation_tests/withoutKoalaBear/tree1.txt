@@ -1,0 +1,2 @@
+((((Ornithorhynchus_anatinus,Dasypus_novemcinctus),Erinaceus_europaeus),Sorex_araneus),Vombatus_ursinus);
+

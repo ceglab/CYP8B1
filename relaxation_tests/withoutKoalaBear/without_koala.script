@@ -1,0 +1,41 @@
+library("ape")
+tiff("Figure_Tree_topology_Without_Koala.tiff", width = 20, height = 10, units = 'in', res = 150)
+layout(matrix(c(1,2,3,4,4,5,6,7,8,9), 2, 5, byrow = TRUE))
+tree.owls <- read.tree("tree1.txt")
+plot(tree.owls,edge.color="red",edge.width=4,label.offset=0.3,main="Topology 1",cex=1.09,bty = "n")
+tree.owls <- read.tree("tree2.txt")
+plot(tree.owls,edge.color="blue",edge.width=4,label.offset=0.3,main="Topology 2",cex=1.09,bty = "n")
+tree.owls <- read.tree("tree3.txt")
+plot(tree.owls,edge.color="green",edge.width=4,label.offset=0.3,main="Topology 3",cex=1.09,bty = "n")
+tree.owls <- read.tree("tree4.txt")
+plot(tree.owls,edge.color="brown",edge.width=4,label.offset=0.3,main="Topology 4",cex=1.09,bty = "n")
+
+xlimval<-20
+scalingfactor<-1.75
+#tiff("FIGURE_WITHOUT_KOLAL.tiff", width = 15, height = 4, units = 'in', res = 100)
+#par(mfrow=c(1,5))
+read.table(file="wombat.txt",header=TRUE,fill=TRUE,sep=" ",as.is=TRUE)->M
+species<-"Vombatus_ursinus"
+plot(M$K_value1[M$Foreground==species],-log(M$P_value[M$Foreground==species]),col=ifelse(M$Tree_topology[M$Foreground==species]==1,"red",ifelse(M$Tree_topology[M$Foreground==species]==2,"blue",ifelse(M$Tree_topology[M$Foreground==species]==3,"green",ifelse(M$Tree_topology[M$Foreground==species]==4,"brown",ifelse(M$Tree_topology[M$Foreground==species]==5,"darkmagenta","black"))))),pch=ifelse(M$P_value[M$Foreground==species]<0.05,15,1),xlab="K value",ylab="-log(p-value)",main=species,xlim=c(0,xlimval),ylim=c(0,10),cex.lab=1.5, cex.axis=1.5,cex=1.5,cex.main=1.6)
+abline(v=1,col="blue")
+ 
+read.table(file="wombat.txt",header=TRUE,fill=TRUE,sep=" ",as.is=TRUE)->M
+species<-"Ornithorhynchus_anatinus"
+plot(M$K_value1[M$Foreground==species],-log(M$P_value[M$Foreground==species]),col=ifelse(M$Tree_topology[M$Foreground==species]==1,"red",ifelse(M$Tree_topology[M$Foreground==species]==2,"blue",ifelse(M$Tree_topology[M$Foreground==species]==3,"green",ifelse(M$Tree_topology[M$Foreground==species]==4,"brown",ifelse(M$Tree_topology[M$Foreground==species]==5,"darkmagenta","black"))))),pch=ifelse(M$P_value[M$Foreground==species]<0.05,15,1),xlab="K value",ylab="-log(p-value)",main=species,xlim=c(0,xlimval),ylim=c(0,10),cex.lab=1.5, cex.axis=1.5,cex=1.5,cex.main=1.6)
+abline(v=1,col="blue")
+ 
+read.table(file="wombat.txt",header=TRUE,fill=TRUE,sep=" ",as.is=TRUE)->M
+species<-"Dasypus_novemcinctus"
+plot(M$K_value1[M$Foreground==species],-log(M$P_value[M$Foreground==species]),col=ifelse(M$Tree_topology[M$Foreground==species]==1,"red",ifelse(M$Tree_topology[M$Foreground==species]==2,"blue",ifelse(M$Tree_topology[M$Foreground==species]==3,"green",ifelse(M$Tree_topology[M$Foreground==species]==4,"brown",ifelse(M$Tree_topology[M$Foreground==species]==5,"darkmagenta","black"))))),pch=ifelse(M$P_value[M$Foreground==species]<0.05,15,1),xlab="K value",ylab="-log(p-value)",main=species,xlim=c(0,xlimval),ylim=c(0,10),cex.lab=1.5, cex.axis=1.5,cex=1.5,cex.main=1.6)
+abline(v=1,col="blue")
+ 
+read.table(file="wombat.txt",header=TRUE,fill=TRUE,sep=" ",as.is=TRUE)->M
+species<-"Erinaceus_europaeus"
+plot(M$K_value1[M$Foreground==species],-log(M$P_value[M$Foreground==species]),col=ifelse(M$Tree_topology[M$Foreground==species]==1,"red",ifelse(M$Tree_topology[M$Foreground==species]==2,"blue",ifelse(M$Tree_topology[M$Foreground==species]==3,"green",ifelse(M$Tree_topology[M$Foreground==species]==4,"brown",ifelse(M$Tree_topology[M$Foreground==species]==5,"darkmagenta","black"))))),pch=ifelse(M$P_value[M$Foreground==species]<0.05,15,1),xlab="K value",ylab="-log(p-value)",main=species,xlim=c(0,xlimval),ylim=c(0,10),cex.lab=1.5, cex.axis=1.5,cex=1.5,cex.main=1.6)
+abline(v=1,col="blue")
+ 
+read.table(file="wombat.txt",header=TRUE,fill=TRUE,sep=" ",as.is=TRUE)->M
+species<-"Sorex_araneus"
+plot(M$K_value1[M$Foreground==species],-log(M$P_value[M$Foreground==species]),col=ifelse(M$Tree_topology[M$Foreground==species]==1,"red",ifelse(M$Tree_topology[M$Foreground==species]==2,"blue",ifelse(M$Tree_topology[M$Foreground==species]==3,"green",ifelse(M$Tree_topology[M$Foreground==species]==4,"brown",ifelse(M$Tree_topology[M$Foreground==species]==5,"darkmagenta","black"))))),pch=ifelse(M$P_value[M$Foreground==species]<0.05,15,1),xlab="K value",ylab="-log(p-value)",main=species,xlim=c(0,xlimval),ylim=c(0,10),cex.lab=1.5, cex.axis=1.5,cex=1.5,cex.main=1.6)
+abline(v=1,col="blue")
+dev.off()
