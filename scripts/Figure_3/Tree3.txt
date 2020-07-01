@@ -1,0 +1,2 @@
+(Chrysochloris_asiatica,((Echinops_telfairi,Elephantulus_edwardii),((Loxodonta_africana,(Procavia_capensis,Trichechus_manatus_latirostris)),Orycteropus_afer_afer)));
+

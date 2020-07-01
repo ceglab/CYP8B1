@@ -1,0 +1,1 @@
+(Coturnix_japonica,((Gallus_gallus,Numida_meleagris),((Meleagris_gallopavo,Tympanuchus_cupido_pinnatus),Syrmaticus_mikado)));
